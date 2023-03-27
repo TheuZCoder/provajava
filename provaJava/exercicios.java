@@ -53,16 +53,15 @@ public class exercicios {
 
         System.out.println("O resultado da operação é: " + resultado);
 
-        leitura.close();
     }
 
     public void ex2(){
-        Scanner leitura = new Scanner(System.in);
+        int matricula,time;
 
         System.out.print("Digite o número de matrícula do aluno: ");
-        int matricula = leitura.nextInt();
+        matricula = leitura.nextInt();
 
-        int time = (matricula % 4) + 1;
+        time = (matricula % 4) + 1;
 
         switch (time) {
             case 1:
@@ -78,6 +77,27 @@ public class exercicios {
                 System.out.println("O aluno de matrícula " + matricula + " foi designado para o Time do Jerome.");
                 break;
         }
+
+    }
+    public void ex3(){
+        double morangos,macas,bananas,total;
+
+        System.out.print("Quantidade de morangos (em kg): ");
+        morangos = leitura.nextDouble();
+
+        System.out.print("Quantidade de maçãs (em kg): ");
+        macas = leitura.nextDouble();
+
+        System.out.print("Quantidade de bananas (em kg): ");
+        bananas = leitura.nextDouble();
+
+        total = (morangos * 3.5) + (macas * 2.3) + (bananas * 1.8);
+
+        if (total > 30 || (morangos + macas + bananas) > 15) {
+            total *= 0.9;
+        }
+
+        System.out.printf("Valor a ser pago: R$ %.2f\n", total);
 
         leitura.close();
     }
