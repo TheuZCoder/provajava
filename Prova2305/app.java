@@ -5,7 +5,7 @@ package Prova2305;
  */
 public class app {
     public static void main(String[] args) {
-        prova obj1 = new prova();
+        Exercicios obj1 = new Exercicios();
         obj1.ex1();
     
     }
