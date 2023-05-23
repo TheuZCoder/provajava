@@ -56,27 +56,28 @@ public class Exercicios {
         }
     }
     public void ex2() {
-        int numeroSorteado = aleatorio.nextInt(1001);
+        int numeroSorteado = aleatorio.nextInt(10);
         int palpite;
         int tentativas = 0;
-
+        Boolean tenteNovamente = true;
         System.out.println("digite um palpite entre 0 a 1000");
-        palpite = leitura.nextInt();
-        tentativas++;
-        if (palpite == numeroSorteado) {
-            System.out.println("PARABENS VOCÊ É INCRIVEL!!!!!!! ACERTOU");
-        } else {
-            while (palpite != numeroSorteado) {
-                if (palpite < numeroSorteado) {
-                    System.out.println("o palpite é menor que o numero sorteado");
-                } else {
-                    System.out.println("o palpite é maior que o numero sorteado");
-                }
-                System.out.println("Digite um novo palpite: ");
-                palpite = leitura.nextInt();
-                tentativas++;
+        while (tenteNovamente) {
+            
+            palpite = leitura.nextInt();
+            if (palpite > numeroSorteado) {
+                System.out.println("o palpite é menor que o numero sorteado");
+            } else if (palpite < numeroSorteado) {
+                System.out.println("o palpite é maior que o numero sorteado");
+            } else  {
+                System.out.println("Você acertou parabens / voce acertou em " +(tentativas +1) +" tentativas");
+                tenteNovamente = false;
             }
-            System.out.println("Parabens!! você acertou o numero em "+ tentativas+ " tentativas");
+            tentativas++;
         }
+        
+        
+    }
+    public void ex3() {
+        
     }
 }
